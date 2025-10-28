@@ -1,0 +1,14 @@
+
+            <mujoco model="light_bulb_mesh">
+                <asset>
+                    <mesh name="light_bulb" file="/home/diego/TFM/GRAB/light_bulb.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="light_bulb_mesh" pos="0.14000000059604645 -0.6200000047683716 0.9700000286102295">
+                        <joint type = "free" name = "light_bulb_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="light_bulb" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

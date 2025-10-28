@@ -1,0 +1,14 @@
+
+            <mujoco model="wine_glass_mesh">
+                <asset>
+                    <mesh name="wine_glass" file="/home/diego/TFM/GRAB/kintree_table.npy" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="wine_glass_mesh" pos="0.07000000029802322 -0.7099999785423279 0.9300000071525574">
+                        <joint type = "free" name = "wine_glass_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="wine_glass" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

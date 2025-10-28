@@ -1,0 +1,16 @@
+
+            <mujoco model="phone_mesh">
+                <asset>
+                    <mesh name="phone" file="/home/diego/TFM/GRAB/phone.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="phone_mesh" pos="0 0 0">
+                        <joint type = "free" name = "phone_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.0017 0.0017 0.0017"/>
+                        <geom name="phone_mesh" type="mesh" mesh="phone" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1.3 1.3 1.3"/>
+                        <!-- Object-focused camera with relative position loaded from config.yaml-->
+                        <!-- <camera name="object_view" pos="0 0 1" xyaxes="0 0 1 0 1 0" mode="fixed"/> -->
+                    </body>
+                </worldbody>
+            </mujoco>

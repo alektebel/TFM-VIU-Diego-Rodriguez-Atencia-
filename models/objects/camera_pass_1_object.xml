@@ -1,0 +1,14 @@
+
+            <mujoco model="camera_mesh">
+                <asset>
+                    <mesh name="camera" file="/home/diego/TFM/GRAB/camera.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="camera_mesh" pos="0.18000000715255737 -0.46000000834465027 0.7900000214576721">
+                        <joint type = "free" name = "camera_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="camera" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

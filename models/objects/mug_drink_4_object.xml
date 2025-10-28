@@ -1,0 +1,14 @@
+
+            <mujoco model="mug_mesh">
+                <asset>
+                    <mesh name="mug" file="/home/diego/TFM/GRAB/mug.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="mug_mesh" pos="0.05999999865889549 -0.6899999976158142 0.8100000023841858">
+                        <joint type = "free" name = "mug_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="mug" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

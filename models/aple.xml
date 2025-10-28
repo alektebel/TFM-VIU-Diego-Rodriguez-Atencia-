@@ -1,0 +1,12 @@
+<mujoco model = "apple">
+  <asset>
+      <mesh name="apple" file="/home/diego/TFM/GRAB/apple.stl" scale = "0.001 0.001 0.001"/>
+    <material name="apple_mat" rgba="1 0 0 1"/>
+  </asset>
+  <worldbody>
+    <light name="top" pos="0 0 1"/>
+    <body name="mocap_apple" mocap="true" pos = "0 0 0.5">
+      <geom type="mesh" mesh="apple" material="apple_mat"/>
+    </body>
+  </worldbody>
+</mujoco>

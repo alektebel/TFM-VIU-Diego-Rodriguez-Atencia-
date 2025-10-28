@@ -1,0 +1,14 @@
+
+            <mujoco model="water_bottle_mesh">
+                <asset>
+                    <mesh name="water_bottle" file="/home/diego/TFM/GRAB/water_bottle.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="water_bottle_mesh" pos="0.05000000074505806 -0.6800000071525574 1.0399999618530273">
+                        <joint type = "free" name = "water_bottle_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="water_bottle" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

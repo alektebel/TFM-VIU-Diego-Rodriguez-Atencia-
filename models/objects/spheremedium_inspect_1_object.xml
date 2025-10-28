@@ -1,0 +1,14 @@
+
+            <mujoco model="sphere_medium_mesh">
+                <asset>
+                    <mesh name="sphere_medium" file="/home/diego/TFM/GRAB/shapedirs.npy" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="sphere_medium_mesh" pos="0.029999999329447746 -0.6299999952316284 0.949999988079071">
+                        <joint type = "free" name = "sphere_medium_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="sphere_medium" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

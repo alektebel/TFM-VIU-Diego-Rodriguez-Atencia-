@@ -1,0 +1,14 @@
+
+            <mujoco model="toothpaste_mesh">
+                <asset>
+                    <mesh name="toothpaste" file="/home/diego/TFM/GRAB/toothpaste.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="toothpaste_mesh" pos="0.029999999329447746 -0.6499999761581421 0.8199999928474426">
+                        <joint type = "free" name = "toothpaste_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="toothpaste" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

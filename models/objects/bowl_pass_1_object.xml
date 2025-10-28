@@ -1,0 +1,14 @@
+
+            <mujoco model="bowl_mesh">
+                <asset>
+                    <mesh name="bowl" file="/home/diego/TFM/GRAB/.git" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="bowl_mesh" pos="0.1899999976158142 -0.44999998807907104 1.0399999618530273">
+                        <joint type = "free" name = "bowl_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="bowl" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

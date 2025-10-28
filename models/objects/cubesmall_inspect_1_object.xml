@@ -1,0 +1,14 @@
+
+            <mujoco model="cube_small_mesh">
+                <asset>
+                    <mesh name="cube_small" file="/home/diego/TFM/GRAB/cube_small.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="cube_small_mesh" pos="0.20000000298023224 -0.2800000011920929 1.2000000476837158">
+                        <joint type = "free" name = "cube_small_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="cube_small" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

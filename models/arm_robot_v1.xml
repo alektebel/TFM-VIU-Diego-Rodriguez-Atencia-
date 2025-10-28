@@ -1,0 +1,47 @@
+<mujoco>
+  <option timestep="0.01"/>
+  
+  <visual>
+    <global offwidth="800" offheight="600"/>
+  </visual>
+  
+  <worldbody>
+    <!-- Base -->
+    <body name="base" pos="0 0 0">
+      <geom type="box" size="0.1 0.1 0.05" rgba="0.5 0.5 0.5 1"/>
+      
+      <!-- Shoulder joint (flexion/extension) -->
+      <body name="upper_arm">
+        <joint name="shoulder" type="hinge" axis="0 1 0" range="-90 90" damping="0.5"/>
+        <geom type="cylinder" size="0.03 0.15" pos="0 0 0.15" rgba="0 0.8 0 1"/>
+        
+        <!-- Elbow joint (flexion/extension) -->
+        <body name="forearm">
+          <joint name="elbow" type="hinge" axis="0 1 0" range="-90 90" damping="0.5"/>
+          <geom type="cylinder" size="0.025 0.15" pos="0 0 0.15" rgba="0 0 0.8 1"/>
+          
+          <!-- Wrist joint (pronation/supination) -->
+          <body name="hand">
+            <joint name="wrist" type="hinge" axis="1 0 0" range="-45 45" damping="0.3"/>
+            <geom type="box" size="0.04 0.04 0.06" pos="0 0 0.1" rgba="0.8 0 0 1"/>
+            
+            <!-- End effector -->
+            <site name="grip_center" pos="0 0 0.12" size="0.01"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    
+    <!-- Target for IK -->
+    <body name="target" pos="0.2 0 0.4">
+      <geom type="sphere" size="0.02" rgba="1 0 0 0.5"/>
+      <site name="target_site"/>
+    </body>
+  </worldbody>
+  
+  <actuator>
+    <motor joint="shoulder" gear="50" ctrlrange="-100 100"/>
+    <motor joint="elbow" gear="50" ctrlrange="-100 100"/>
+    <motor joint="wrist" gear="30" ctrlrange="-50 50"/>
+  </actuator>
+</mujoco>

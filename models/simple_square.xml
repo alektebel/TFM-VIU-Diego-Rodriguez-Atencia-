@@ -1,0 +1,11 @@
+<mujoco>
+    <option timestep="0.01"/>
+    
+    <worldbody>
+        <!-- Moving square -->
+        <body name="square" pos="0 0 0">
+            <freejoint/>
+            <geom type="box" size="0.1 0.1 0.01" rgba="1 0 0 1"/>
+        </body>
+    </worldbody>
+</mujoco> 

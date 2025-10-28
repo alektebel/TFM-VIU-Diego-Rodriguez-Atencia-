@@ -1,0 +1,14 @@
+
+            <mujoco model="binoculars_mesh">
+                <asset>
+                    <mesh name="binoculars" file="/home/diego/TFM/GRAB/binoculars.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="binoculars_mesh" pos="-0.03999999910593033 -0.6000000238418579 0.7699999809265137">
+                        <joint type = "free" name = "binoculars_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="binoculars" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

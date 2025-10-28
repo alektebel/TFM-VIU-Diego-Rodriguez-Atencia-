@@ -1,0 +1,14 @@
+
+            <mujoco model="headphones_mesh">
+                <asset>
+                    <mesh name="headphones" file="/home/diego/TFM/GRAB/headphones.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="headphones_mesh" pos="0.15000000596046448 -0.5400000214576721 0.8399999737739563">
+                        <joint type = "free" name = "headphones_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="headphones" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

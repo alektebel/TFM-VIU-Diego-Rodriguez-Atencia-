@@ -1,0 +1,16 @@
+
+            <mujoco model="toothbrush_mesh">
+                <asset>
+                    <mesh name="toothbrush" file="/home/diego/TFM/GRAB/toothbrush.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="toothbrush_mesh" pos="0 0 0">
+                        <joint type = "free" name = "toothbrush_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.0017 0.0017 0.0017"/>
+                        <geom name="toothbrush_mesh" type="mesh" mesh="toothbrush" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1.3 1.3 1.3"/>
+                        <!-- Object-focused camera with relative position loaded from config.yaml-->
+                        <!-- <camera name="object_view" pos="0 0 1" xyaxes="0 0 1 0 1 0" mode="fixed"/> -->
+                    </body>
+                </worldbody>
+            </mujoco>

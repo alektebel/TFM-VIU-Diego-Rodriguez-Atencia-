@@ -1,0 +1,14 @@
+
+            <mujoco model="eyeglasses_mesh">
+                <asset>
+                    <mesh name="eyeglasses" file="/home/diego/TFM/GRAB/eyeglasses.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="eyeglasses_mesh" pos="0.17000000178813934 -0.44999998807907104 0.9300000071525574">
+                        <joint type = "free" name = "eyeglasses_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="eyeglasses" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

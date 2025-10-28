@@ -1,0 +1,55 @@
+
+<mujoco model="stapler_staple_1_object_s1.xml_scene">
+    <include file="/home/diego/TFM/models/objects/stapler_staple_1_object_s1.xml"/>
+    <include file="/home/diego/TFM/models/prosthetics/right_hand.xml"/>
+
+  <statistic center="0 0 0" extent="0.3"/>
+
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <quality shadowsize="8192"/>
+    <global azimuth="130" elevation="-40"/>
+  </visual>
+
+
+
+  <asset>
+
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+      <texture type="2d" name="groundplane" builtin="flat" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+      markrgb="0.8 0.8 0.8" width="300" height="300"/>
+
+    <!-- 2. Gradient with random noise -->
+    <texture type="2d" name="random_gradient" builtin="gradient" 
+             rgb1="0.7 0.7 0.9" rgb2="0.3 0.3 0.5" 
+             mark="random" markrgb="0.9 0.9 0.7" 
+             random="0.01" width="256" height="256"/>
+
+
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    <material name="mat_random_gradient" texture="random_gradient" texuniform="true" texrepeat="6 6" reflectance="0.12"/>
+
+  </asset>
+  <equality>
+  <weld body1="mocap" body2="hand_root"
+        solimp="0.999 0.999 0.001"
+        solref="0.001 1"/>
+</equality>
+
+  <worldbody>
+    <light pos="0 0 1" castshadow = "false"/>
+    <light pos="0.3 0 1.5" dir="0 0 -1" directional="true" castshadow = "false"/>
+  
+    
+    <camera name = "panoramic_view" pos="1.105 1.154 1.204" xyaxes="-0.722 0.692 0.000 -0.416 -0.435 0.799"/>
+
+    <geom name="floor" pos="0 0 0" size="0 0 0.05" type="plane" material="groundplane"/>
+
+    <body mocap="true" name="mocap" pos="2.8000000e-16 -3.3000160e-01  1.6436609e+00">
+        <site pos="0 0 0.075" size="0.003 0.003 0.1" type="box" name="mocap_left_site1" rgba="0 0 1 1"/>
+        <site pos="0 0.075 0" size="0.003 0.1 0.003" type="box" name="mocap_left_site2" rgba="0 1 0 1"/>
+        <site pos="0.075 0 0" size="0.1 0.003 0.003" type="box" name="mocap_left_site3" rgba="1 0 0 1"/>
+    </body>
+
+  </worldbody>
+</mujoco>

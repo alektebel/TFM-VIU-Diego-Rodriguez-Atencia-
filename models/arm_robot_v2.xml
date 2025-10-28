@@ -1,0 +1,6 @@
+<!-- Alternative model -->
+<mujoco>
+  <worldbody>
+    <!-- Your robot model here -->
+  </worldbody>
+</mujoco>

@@ -1,0 +1,14 @@
+
+            <mujoco model="pyramid_medium_mesh">
+                <asset>
+                    <mesh name="pyramid_medium" file="/home/diego/TFM/GRAB/pyramid_medium.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="pyramid_medium_mesh" pos="0.1599999964237213 -0.6399999856948853 0.8799999952316284">
+                        <joint type = "free" name = "pyramid_medium_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="pyramid_medium" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

@@ -1,0 +1,14 @@
+
+            <mujoco model="alarm_clock_mesh">
+                <asset>
+                    <mesh name="alarm_clock" file="/home/diego/TFM/GRAB/alarm_clock.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="alarm_clock_mesh" pos="0.0 -0.4399999976158142 1.0299999713897705">
+                        <joint type = "free" name = "alarm_clock_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="alarm_clock" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

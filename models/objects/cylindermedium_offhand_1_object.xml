@@ -1,0 +1,14 @@
+
+            <mujoco model="cylinder_medium_mesh">
+                <asset>
+                    <mesh name="cylinder_medium" file="/home/diego/TFM/GRAB/posedirs.npy" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="cylinder_medium_mesh" pos="0.23000000417232513 -0.49000000953674316 0.8299999833106995">
+                        <joint type = "free" name = "cylinder_medium_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="cylinder_medium" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

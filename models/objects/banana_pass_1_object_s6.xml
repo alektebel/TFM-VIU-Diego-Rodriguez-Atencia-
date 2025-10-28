@@ -1,0 +1,16 @@
+
+            <mujoco model="banana_mesh">
+                <asset>
+                    <mesh name="banana" file="/home/diego/TFM/GRAB/banana.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="banana_mesh" pos="0 0 0">
+                        <joint type = "free" name = "banana_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.0017 0.0017 0.0017"/>
+                        <geom name="banana_mesh" type="mesh" mesh="banana" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1.3 1.3 1.3"/>
+                        <!-- Object-focused camera with relative position loaded from config.yaml-->
+                        <!-- <camera name="object_view" pos="0 0 1" xyaxes="0 0 1 0 1 0" mode="fixed"/> -->
+                    </body>
+                </worldbody>
+            </mujoco>

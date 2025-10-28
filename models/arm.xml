@@ -1,0 +1,22 @@
+<mujoco model="arm_trajectory_viewer">
+  <option timestep="0.01" gravity="0 0 -9.81"/>
+
+  <worldbody>
+    <light pos="0 0 2"/>
+    <geom type="plane" size="1 1 0.1" rgba="0.9 0.9 0.9 1"/>
+
+    <!-- Joints as mocap bodies with sphere geoms -->
+    <body name="shoulder" mocap="true">
+      <geom type="sphere" size="0.03" rgba="1 0 0 1"/>
+    </body>
+
+    <body name="elbow" mocap="true">
+      <geom type="sphere" size="0.03" rgba="0 1 0 1"/>
+    </body>
+
+    <body name="wrist" mocap="true" >
+      <geom type="sphere" size="0.03" rgba="0 0 1 1"/>
+    </body>
+  </worldbody>
+</mujoco>
+

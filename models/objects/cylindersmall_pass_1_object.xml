@@ -1,0 +1,14 @@
+
+            <mujoco model="cylinder_small_mesh">
+                <asset>
+                    <mesh name="cylinder_small" file="/home/diego/TFM/GRAB/cylinder_small.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="cylinder_small_mesh" pos="0.18000000715255737 -0.44999998807907104 0.949999988079071">
+                        <joint type = "free" name = "cylinder_small_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="cylinder_small" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

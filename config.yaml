@@ -1,0 +1,39 @@
+# All variables you might want to change, in one place!
+device: "cuda"
+obj: "mouse"
+gesture: "mouse_use_1"
+
+prosthetic_path: "/home/diego/TFM/models/prosthetics/right_hand.xml"
+scene_path: "/home/diego/TFM/models/prosthetics/scene_right.xml"
+model_base: "/home/diego/TFM/models/scenes/"
+grab_base: "/home/diego/TFM/GRAB/grab/"
+object_model_base: "/home/diego/TFM/models/objects/"
+emg_base: "/home/diego/TFM/data/emg/"
+checkpoint_dir: "/home/diego/TFM/src/training/etapa_1/checkpoints/"
+
+
+db5_directory: "/home/diego/TFM/data/DB5/"
+ninapro_data_dir: "/home/diego/TFM/data/DB1/"
+
+subject: "s1"
+
+simulation_example: "S1_E1_A1"
+ 
+
+
+etapa: "etapa_1"
+window_size: 500
+num_channels: 7
+transition_steps: 100
+smoothing_alpha: 0.99
+
+camera_names:
+  cam_mf_tip: "cam_mf_tip"
+  cam_th_tip: "cam_th_tip"
+
+actor_args:
+  given_location: true
+  use_ou_noise: false
+  training_stage: "etapa_1"
+
+# Add any other variable you want to configure!

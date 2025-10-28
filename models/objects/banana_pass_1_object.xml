@@ -1,0 +1,14 @@
+
+            <mujoco model="banana_mesh">
+                <asset>
+                    <mesh name="banana" file="/home/diego/TFM/GRAB/weights.npy" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="banana_mesh" pos="-0.019999999552965164 -0.5699999928474426 1.100000023841858">
+                        <joint type = "free" name = "banana_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="banana" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

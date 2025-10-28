@@ -1,0 +1,14 @@
+
+            <mujoco model="torus_medium_mesh">
+                <asset>
+                    <mesh name="torus_medium" file="/home/diego/TFM/GRAB/torus_medium.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="torus_medium_mesh" pos="0.05000000074505806 -0.6499999761581421 1.0399999618530273">
+                        <joint type = "free" name = "torus_medium_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="torus_medium" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

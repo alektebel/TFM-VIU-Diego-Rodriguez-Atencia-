@@ -1,0 +1,65 @@
+<mujoco>
+    <option timestep="0.01"/>
+    
+    <visual>
+        <global offwidth="800" offheight="600"/>
+    </visual>
+    
+    <worldbody>
+        <!-- Add a reference frame for stabilization -->
+        <body name="reference" pos="0 0 0.3">
+            <geom type="sphere" size="0.01" rgba="0 0 0 0"/>
+        </body>
+        
+        <!-- Floating forearm -->
+        <body name="forearm" pos="0 0 0.3">
+            <freejoint/>
+            <geom type="cylinder" size="0.05 0.2" rgba="0.8 0.8 0.8 1"/>
+            
+            <!-- Hand -->
+            <body name="hand" pos="0 0 0.2">
+                <joint name="wrist_flexion" type="hinge" axis="1 0 0" range="-45 45" damping="1"/>
+                <geom type="box" size="0.08 0.08 0.05" rgba="0.9 0.9 0.9 1"/>
+                
+                <!-- Thumb -->
+                <body name="thumb" pos="0.08 0 0">
+                    <joint name="thumb" type="hinge" axis="0 1 0" range="0 90" damping="0.5"/>
+                    <geom type="capsule" size="0.02 0.08" rgba="0.9 0.7 0.7 1"/>
+                </body>
+                
+                <!-- Index finger -->
+                <body name="index" pos="0.08 0 0.08">
+                    <joint name="index" type="hinge" axis="1 0 0" range="0 90" damping="0.5"/>
+                    <geom type="capsule" size="0.015 0.07" rgba="0.7 0.9 0.7 1"/>
+                </body>
+                
+                <!-- Middle finger -->
+                <body name="middle" pos="0 0 0.08">
+                    <joint name="middle" type="hinge" axis="1 0 0" range="0 90" damping="0.5"/>
+                    <geom type="capsule" size="0.015 0.08" rgba="0.7 0.7 0.9 1"/>
+                </body>
+                
+                <!-- Ring finger -->
+                <body name="ring" pos="-0.08 0 0.08">
+                    <joint name="ring" type="hinge" axis="1 0 0" range="0 90" damping="0.5"/>
+                    <geom type="capsule" size="0.015 0.07" rgba="0.9 0.9 0.7 1"/>
+                </body>
+                
+                <!-- Pinky finger -->
+                <body name="pinky" pos="-0.08 0 0">
+                    <joint name="pinky" type="hinge" axis="1 0 0" range="0 90" damping="0.5"/>
+                    <geom type="capsule" size="0.015 0.06" rgba="0.9 0.7 0.9 1"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    
+    <actuator>
+        <motor joint="wrist_flexion" gear="50" ctrlrange="-100 100"/>
+        <motor joint="thumb" gear="30" ctrlrange="-50 50"/>
+        <motor joint="index" gear="30" ctrlrange="-50 50"/>
+        <motor joint="middle" gear="30" ctrlrange="-50 50"/>
+        <motor joint="ring" gear="30" ctrlrange="-50 50"/>
+        <motor joint="pinky" gear="30" ctrlrange="-50 50"/>
+    </actuator>
+</mujoco> 

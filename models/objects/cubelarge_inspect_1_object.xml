@@ -1,0 +1,14 @@
+
+            <mujoco model="cube_large_mesh">
+                <asset>
+                    <mesh name="cube_large" file="/home/diego/TFM/GRAB/init_env_vars.sh" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="cube_large_mesh" pos="0.1599999964237213 -0.3499999940395355 0.9900000095367432">
+                        <joint type = "free" name = "cube_large_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="cube_large" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>

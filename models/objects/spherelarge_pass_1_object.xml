@@ -1,0 +1,14 @@
+
+            <mujoco model="sphere_large_mesh">
+                <asset>
+                    <mesh name="sphere_large" file="/home/diego/TFM/GRAB/sphere_large.stl" scale  = "0.001 0.001 0.001"/>
+                </asset>
+
+                <worldbody>
+                    <body name="sphere_large_mesh" pos="0.15000000596046448 -0.6600000262260437 0.8500000238418579">
+                        <joint type = "free" name = "sphere_large_joint"/>
+                        <inertial pos = "0 0 0" mass="0.2" diaginertia="0.001 0.001 0.001"/>
+                        <geom type="mesh" mesh="sphere_large" mass="1.0" rgba="0.5 0.5 0.8 1" size = "1 1 1"/>
+                    </body>
+                </worldbody>
+            </mujoco>
